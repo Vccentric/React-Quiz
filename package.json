@@ -48,6 +48,8 @@
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-hot-loader": "^4.3.12"
+    "react-hot-loader": "^4.3.12",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1"
   }
 }
