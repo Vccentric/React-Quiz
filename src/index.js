@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import QuizContainer from "./containers/QuizContainer";
+import * as data from "../data/data.json";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<QuizContainer data={data.default} />, document.getElementById("root"));

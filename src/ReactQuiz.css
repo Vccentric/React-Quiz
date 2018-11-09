@@ -1,0 +1,99 @@
+/**
+ * React Quiz v1.0.0
+ * CSS file for the react quiz application
+ *
+ * @author      Christopher Viray
+ * @copyright   (c) 2018 Christopher Viray
+ * @license     MIT
+ * @version     1.0.0
+ */
+
+.popup {
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.popup h1 {
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    background-color: lightskyblue;
+}
+
+button {
+    margin: 10px auto;
+}
+
+#quiz {
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid gray;
+}
+
+#quizInfo {
+    position: relative;
+    height: 40px;
+    background-color: lightskyblue;
+}
+
+#questionCount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#question {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+#answerOptions {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.answer {
+    display: flex;
+    cursor: pointer;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: white;
+}
+
+.answer:hover {
+    background-color: whitesmoke;
+}
+
+.answer span {
+    padding: 10px;
+}
+
+.answer p {
+    margin: 0;
+    padding: 10px;
+}
+
+#message {
+    font-weight: bold;
+    text-align: center;
+    margin: 5px auto;
+    color: black;
+}
+
+#message.correct {
+    color: green;
+}
+
+#message.wrong {
+    color: red;
+}
