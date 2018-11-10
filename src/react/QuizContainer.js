@@ -1,10 +1,10 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import AnswerOption from '../components/AnswerOptions';
-import Message from '../components/Message';
-import Popup from '../components/Popup';
-import Question from '../components/Question';
-import QuizInfo from '../components/QuizInfo';
+import AnswerOption from './AnswerOptions';
+import Message from './Message';
+import Popup from './Popup';
+import Question from './Question';
+import QuizInfo from './QuizInfo';
 import '../ReactQuiz.css';
 
 // main component containing the entire quiz
