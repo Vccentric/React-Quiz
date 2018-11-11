@@ -1,11 +1,11 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
-import AnswerOption from './AnswerOptions';
-import Message from './Message';
-import Popup from './Popup';
-import Question from './Question';
-import QuizInfo from './QuizInfo';
-import '../ReactQuiz.css';
+import React from "react";
+import { hot } from "react-hot-loader";
+import AnswerOption from "./AnswerOptions";
+import Message from "./Message";
+import Popup from "./Popup";
+import Question from "./Question";
+import QuizInfo from "./QuizInfo";
+import "../ReactQuiz.css";
 
 // main component containing the entire quiz
 class QuizContainer extends React.Component {
@@ -22,14 +22,14 @@ class QuizContainer extends React.Component {
             count: 0,
             isAnswered: false,
             isCorrect: false,
-            score: 0,
+            score: 0
         };
     }
 
     // function to handle the click action of the start button
     handleStartClick(event) {
         this.setState({
-            start: true,
+            start: true
         });
     }
 
@@ -46,14 +46,14 @@ class QuizContainer extends React.Component {
         this.setState({
             count: count + 1, // increment to next question
             isAnswered: false, // reset
-            isCorrect: false, // reset
+            isCorrect: false // reset
         });
     }
 
     // function to handle the click action of the finish button
     handleFinishClick(event) {
         this.setState({
-            finish: true,
+            finish: true
         });
     }
 
@@ -65,7 +65,7 @@ class QuizContainer extends React.Component {
             count: 0,
             isAnswered: false,
             isCorrect: false,
-            score: 0,
+            score: 0
         });
     }
 
@@ -81,7 +81,7 @@ class QuizContainer extends React.Component {
 
         // defensive check to see if there is a defined value from the selected answer
         const targetValue = event.currentTarget.dataset.value;
-        if (targetValue === undefined || targetValue === '') {
+        if (targetValue === undefined || targetValue === "") {
             return;
         }
 
@@ -96,7 +96,7 @@ class QuizContainer extends React.Component {
         this.setState({
             isAnswered: true,
             isCorrect: correct,
-            score: updateScore,
+            score: updateScore
         });
     }
 
@@ -132,16 +132,19 @@ class QuizContainer extends React.Component {
             const { question } = currentQuestion;
 
             // setup the questions's answer options
-            const answerOptions = currentQuestion.answerOptions.map((answer, index) => (
-                <AnswerOption
-                    key={Math.random()}
-                    index={index}
-                    text={answer}
-                    handleAnswerClick={this.handleAnswerClick}
-                />));
+            const answerOptions = currentQuestion.answerOptions.map(
+                (answer, index) => (
+                    <AnswerOption
+                        key={Math.random()}
+                        index={index}
+                        text={answer}
+                        handleAnswerClick={this.handleAnswerClick}
+                    />
+                )
+            );
 
             // check which button (next/finish) to display
-            const buttonText = ((count + 1) === total) ? 'Finish Quiz' : 'Next Question';
+            const buttonText = ((count + 1) === total) ? "Finish Quiz" : "Next Question";
             const buttonClick = ((count + 1) === total) ? this.handleFinishClick : this.handleNextClick;
 
             // setup element
@@ -164,7 +167,7 @@ class QuizContainer extends React.Component {
                         type="button"
                         className="button"
                         onClick={buttonClick}
-                        style={isAnswered ? { display: 'block' } : { display: 'none' }}
+                        style={isAnswered ? { display: "block" } : { display: "none" }}
                     >
                         {buttonText}
                     </button>
