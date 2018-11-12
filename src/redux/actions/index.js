@@ -1,6 +1,7 @@
 // Action Types
 export const START_QUIZ = "START_QUIZ";
 export const END_QUIZ = "END_QUIZ";
+export const RESTART_QUIZ = "RESTART_QUIZ";
 export const NEXT_QUESTION = "NEXT_QUESTION";
 export const SELECT_ANSWER = "SELECT_ANSWER";
 
@@ -11,6 +12,10 @@ export const startQuiz = () => ({
 
 export const endQuiz = () => ({
     type: END_QUIZ
+});
+
+export const restartQuiz = () => ({
+    type: RESTART_QUIZ
 });
 
 export const nextQuestion = () => ({

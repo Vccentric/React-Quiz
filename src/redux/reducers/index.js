@@ -1,4 +1,4 @@
-import { START_QUIZ, END_QUIZ, NEXT_QUESTION, SELECT_ANSWER } from "../actions";
+import { START_QUIZ, END_QUIZ, RESTART_QUIZ, NEXT_QUESTION, SELECT_ANSWER } from "../actions";
 import * as data from "../../../data/data.json";
 
 // initial state
@@ -28,6 +28,15 @@ const rootReducer = (state = initialState, action) => {
             return Object.assign({}, state, {
                 finish: true
             });
+        case RESTART_QUIZ:
+            return Object.assign({}, state, {
+                currentIndex: 0,
+                start: false,
+                finish: false,
+                isAnswered: false,
+                isCorrect: false,
+                score: 0
+            });
         case NEXT_QUESTION:
             return Object.assign({}, state, {
                 currentIndex: state.currentIndex + 1,
@@ -40,9 +49,11 @@ const rootReducer = (state = initialState, action) => {
                 if (state.questions && state.questions.length) {
                     const { answerIndex } = state.questions[state.currentIndex];
                     const correct = (action.index === answerIndex);
+                    const score = (correct) ? state.score + 1 : state.score;
                     results = Object.assign({}, state, {
                         isAnswered: true,
-                        isCorrect: correct
+                        isCorrect: correct,
+                        score
                     });
                 }
                 return results;
