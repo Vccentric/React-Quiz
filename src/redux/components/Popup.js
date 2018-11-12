@@ -2,9 +2,7 @@ import React from "react";
 import { hot } from "react-hot-loader";
 
 // popup component
-const Popup = ({
- title, text, handleButtonClick, buttonText,
-}) => (
+const Popup = ({ title, text, handleButtonClick, buttonText }) => (
     <div className="popup">
         <h1>{title}</h1>
         <p>{text}</p>
