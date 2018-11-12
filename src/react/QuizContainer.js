@@ -1,6 +1,6 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import AnswerOption from "./AnswerOptions";
+import AnswerOption from "./AnswerOption";
 import Message from "./Message";
 import Popup from "./Popup";
 import Question from "./Question";
