@@ -14,8 +14,17 @@ body {
     font-size: 20px;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .popup {
-    margin: 20px 15%;
+    width: 80%;
+    max-width: 700px;
     border: 1px solid gray;
     text-align: center;
 }
@@ -32,11 +41,17 @@ button {
 }
 
 #quiz {
-    margin: 20px 100px;
+    width: 80%;
+    max-width: 700px;
     border: 1px solid gray;
 }
 
 #quizInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#quizStatus {
     display: flex;
     padding: 10px;
     background-color: lightskyblue;

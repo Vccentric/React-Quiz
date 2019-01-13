@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import AnswerOption from "../components/AnswerOption";
 import Message from "../components/Message";
 import Popup from "../components/Popup";
-import Question from "../components/Question";
 import QuizInfo from "../components/QuizInfo";
 import { startQuiz, endQuiz, nextQuestion, selectAnswer, restartQuiz } from "../actions";
 import "../../ReactQuiz.css";
@@ -65,8 +64,6 @@ const QuizContainer = ({
                     count={currentIndex}
                     total={total}
                     score={score}
-                />
-                <Question
                     question={question}
                 />
                 <ul id="answerOptions">{answerOptions}</ul>
