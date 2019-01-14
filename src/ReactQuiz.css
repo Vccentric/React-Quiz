@@ -37,6 +37,7 @@ body {
 }
 
 button {
+    cursor: pointer;
     margin: 10px auto;
 }
 
@@ -97,6 +98,21 @@ button {
 .answer p {
     margin: 0;
     padding: 10px;
+}
+
+.answer.disabled {
+    cursor: default;
+    background-color: white;
+}
+
+.answer.correct {
+    cursor: default;
+    background-color: #b1ffb1;
+}
+
+.answer.wrong {
+    cursor: default;
+    background-color: #ffc4c4;
 }
 
 #message {

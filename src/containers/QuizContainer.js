@@ -10,7 +10,7 @@ import "../ReactQuiz.css";
 
 // main component containing the entire quiz
 const QuizContainer = ({
-    questions, currentIndex, score, start, finish, isAnswered, isCorrect,
+    questions, currentIndex, score, start, finish, isAnswered, isCorrect, selectedAnswer,
     handleStartClick, handleFinishClick, handleRestartClick, handleNextClick, handleAnswerClick
 }) => {
     let element = null;
@@ -48,6 +48,8 @@ const QuizContainer = ({
                     index={index}
                     text={answer}
                     isAnswered={isAnswered}
+                    isCorrect={isCorrect}
+                    selectedAnswer={selectedAnswer}
                     handleAnswerClick={handleAnswerClick}
                 />
             )
@@ -89,6 +91,7 @@ const mapStateToProps = (state, ownProps) => (
     {
         questions: state.questions,
         currentIndex: state.currentIndex,
+        selectedAnswer: state.selectedAnswer,
         start: state.start,
         finish: state.finish,
         isAnswered: state.isAnswered,

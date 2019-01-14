@@ -5,6 +5,7 @@ import * as data from "../../data/data.json";
 const initialState = {
     questions: data.default.questions,
     currentIndex: 0,
+    selectedAnswer: -1,
     start: false,
     finish: false,
     isAnswered: false,
@@ -18,6 +19,7 @@ const rootReducer = (state = initialState, action) => {
         case START_QUIZ:
             return Object.assign({}, state, {
                 currentIndex: 0,
+                selectedAnswer: -1,
                 start: true,
                 finish: false,
                 isAnswered: false,
@@ -31,6 +33,7 @@ const rootReducer = (state = initialState, action) => {
         case RESTART_QUIZ:
             return Object.assign({}, state, {
                 currentIndex: 0,
+                selectedAnswer: -1,
                 start: false,
                 finish: false,
                 isAnswered: false,
@@ -40,6 +43,7 @@ const rootReducer = (state = initialState, action) => {
         case NEXT_QUESTION:
             return Object.assign({}, state, {
                 currentIndex: state.currentIndex + 1,
+                selectedAnswer: -1,
                 isAnswered: false,
                 isCorrect: false
             });
@@ -51,6 +55,7 @@ const rootReducer = (state = initialState, action) => {
                     const correct = (action.index === answerIndex);
                     const score = (correct) ? state.score + 1 : state.score;
                     results = Object.assign({}, state, {
+                        selectedAnswer: action.index,
                         isAnswered: true,
                         isCorrect: correct,
                         score
