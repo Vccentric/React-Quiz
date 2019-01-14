@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { devToolsEnhancer } from "redux-devtools-extension";
-import QuizContainer from "./redux/containers/QuizContainer";
-import rootReducer from "./redux/reducers";
+import QuizContainer from "./containers/QuizContainer";
+import rootReducer from "./reducers";
 
 // using react-redux build
 const store = createStore(rootReducer, devToolsEnhancer());

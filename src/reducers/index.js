@@ -1,5 +1,5 @@
 import { START_QUIZ, END_QUIZ, RESTART_QUIZ, NEXT_QUESTION, SELECT_ANSWER } from "../actions";
-import * as data from "../../../data/data.json";
+import * as data from "../../data/data.json";
 
 // initial state
 const initialState = {

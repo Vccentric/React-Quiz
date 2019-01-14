@@ -6,7 +6,7 @@ import Message from "../components/Message";
 import Popup from "../components/Popup";
 import QuizInfo from "../components/QuizInfo";
 import { startQuiz, endQuiz, nextQuestion, selectAnswer, restartQuiz } from "../actions";
-import "../../ReactQuiz.css";
+import "../ReactQuiz.css";
 
 // main component containing the entire quiz
 const QuizContainer = ({
