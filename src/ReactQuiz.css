@@ -27,6 +27,7 @@ body {
     max-width: 700px;
     border: 1px solid gray;
     text-align: center;
+    box-shadow: 2px 2px 2px 0 gray;
 }
 
 .popup h1 {
@@ -44,12 +45,13 @@ button {
 #quiz {
     width: 80%;
     max-width: 700px;
-    border: 1px solid gray;
 }
 
 #quizInfo {
     display: flex;
     flex-direction: column;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 2px 0 gray;
 }
 
 #quizStatus {
@@ -70,7 +72,6 @@ button {
 #question {
     margin: 0;
     padding: 20px;
-    border-bottom: 1px solid gray;
 }
 
 #answerOptions {
@@ -82,9 +83,10 @@ button {
 .answer {
     display: flex;
     cursor: pointer;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border: 1px solid gray;
     background-color: white;
+    margin: 15px 0;
+    box-shadow: 2px 2px 2px 0 gray;
 }
 
 .answer:hover {
@@ -128,4 +130,15 @@ button {
 
 #message.wrong {
     color: red;
+}
+
+#quizControls {
+    visibility: visible;
+    border: 1px solid gray;
+    text-align: center;
+    box-shadow: 2px 2px 2px 0 gray;
+}
+
+#quizControls.hidden {
+    visibility: hidden;
 }

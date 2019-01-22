@@ -58,6 +58,7 @@ const QuizContainer = ({
         // check which button (next/finish) to display
         const buttonText = ((currentIndex + 1) === total) ? "Finish Quiz" : "Next Question";
         const buttonClick = ((currentIndex + 1) === total) ? handleFinishClick : handleNextClick;
+        const controlsClasses = (isAnswered) ? "" : "hidden";
 
         // setup element
         element = (
@@ -69,18 +70,18 @@ const QuizContainer = ({
                     question={question}
                 />
                 <ul id="answerOptions">{answerOptions}</ul>
-                <Message
-                    isAnswered={isAnswered}
-                    isCorrect={isCorrect}
-                />
-                <button
-                    type="button"
-                    className="button"
-                    onClick={buttonClick}
-                    style={isAnswered ? { display: "block" } : { display: "none" }}
-                >
-                    {buttonText}
-                </button>
+                <div id="quizControls" className={controlsClasses}>
+                    <Message
+                        isCorrect={isCorrect}
+                    />
+                    <button
+                        type="button"
+                        className="button"
+                        onClick={buttonClick}
+                    >
+                        {buttonText}
+                    </button>
+                </div>
             </div>
         );
     }
