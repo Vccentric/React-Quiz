@@ -1,0 +1,76 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-console": "off",
+        "max-len": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "no-unused-vars": "off",
+        "indent": "off",
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "quotes": "off",
+        "no-plusplus": "off",
+        "react/prop-types": 0,
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "class-methods-use-this": "off",
+        "jsx-a11y/interactive-supports-focus": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/no-noninteractive-tabindex": "off",
+        "operator-linebreak": [
+            2,
+            "none"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "array-element-newline": [
+            "error",
+            "consistent"
+        ],
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "switch-colon-spacing": [
+            "error",
+            {
+                "after": false,
+                "before": false
+            }
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "consistent": true
+            }
+        ],
+        "no-useless-constructor": "off"
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "document": false
+    },
+    "parser": "babel-eslint"
+}
