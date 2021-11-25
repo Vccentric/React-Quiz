@@ -1,14 +1,15 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
+import React from "react";
+import PropTypes from "prop-types";
 
 // message component
 const Message = ({ isCorrect }) => (
-    <div
-        id="message"
-        className={isCorrect ? 'correct' : 'wrong'}
-    >
-        {isCorrect ? 'Correct Answer!' : 'Wrong Answer!'}
-    </div>
+  <div id="message" className={isCorrect ? "correct" : "wrong"}>
+    {isCorrect ? "Correct Answer!" : "Wrong Answer!"}
+  </div>
 );
 
-export default hot(module)(Message);
+Message.propTypes = {
+  isCorrect: PropTypes.bool,
+};
+
+export default Message;
