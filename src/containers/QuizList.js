@@ -1,10 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Quiz from "../components/Quiz";
-import "normalize.css";
-import "../styles/styles.scss";
 
-// main container component that contains a list of quizzes
+// container component that contains a list of quizzes
 const QuizList = ({ data }) => {
   const quizzes = data?.quizzes?.map((quiz, index) => {
     const key = index * Math.random();
