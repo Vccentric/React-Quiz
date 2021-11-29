@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Quiz from "../components/Quiz";
+import QuizItem from "../components/QuizItem";
 
 // container component that contains a list of quizzes
 const QuizList = ({ data }) => {
@@ -10,7 +10,7 @@ const QuizList = ({ data }) => {
     const total = quiz.questions?.length || 0;
     return (
       <li key={key}>
-        <Quiz name={name} total={total} />
+        <QuizItem name={name} total={total} />
       </li>
     );
   });

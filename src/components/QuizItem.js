@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// quiz component
-const Quiz = ({ name, total }) => (
+// quiz item component
+const QuizItem = ({ name, total }) => (
   <div className="quiz">
     <div className="name">{name}</div>
     <div className="total">{total} Questions</div>
   </div>
 );
 
-Quiz.propTypes = {
+QuizItem.propTypes = {
   name: PropTypes.string,
   total: PropTypes.number,
 };
 
-export default Quiz;
+export default QuizItem;
