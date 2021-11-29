@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import QuizList from "./QuizList";
 import Quiz from "./Quiz";
@@ -7,16 +7,14 @@ import "../styles/styles.scss";
 
 // main container component
 const QuizApp = ({ data }) => {
-  const [showQuizList, setQuizList] = useState(false);
-  const [selectedQuiz, setQuiz] = useState(false);
-  useEffect(() => {
-    setQuizList(true);
-    setQuiz(data.quizzes[0]);
+  const [view, setView] = useState({
+    showQuizList: true,
+    showQuiz: false,
   });
   return (
     <div id="quiz-app">
-      {showQuizList && <QuizList data={data} />}
-      {selectedQuiz && <Quiz {...selectedQuiz} />}
+      {view?.showQuizList && <QuizList data={data} setView={setView} />}
+      {view?.showQuiz && <Quiz {...view.showQuiz} />}
     </div>
   );
 };
