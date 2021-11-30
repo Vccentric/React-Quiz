@@ -2,25 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // answer component
-const Answer = ({ text, total, currentIndex, setCurrentIndex }) => {
+const Answer = ({ value, checkAnswer }) => {
   return (
-    <div
-      className="answer"
-      onClick={() => {
-        const nextIndex = currentIndex + 1 >= total ? 0 : currentIndex + 1;
-        setCurrentIndex(nextIndex);
-      }}
-    >
-      {text}
-    </div>
+    <button className="answer" onClick={() => checkAnswer()}>
+      {value}
+    </button>
   );
 };
 
 Answer.propTypes = {
-  text: PropTypes.string,
-  total: PropTypes.number,
-  currentIndex: PropTypes.number,
-  setCurrentIndex: PropTypes.func,
+  value: PropTypes.string,
+  checkAnswer: PropTypes.func,
 };
 
 export default Answer;
