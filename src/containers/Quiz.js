@@ -4,7 +4,7 @@ import Answer from "../components/Answer";
 import Results from "../components/Results";
 
 // container component that contains a quiz
-const Quiz = ({ name, questions }) => {
+const Quiz = ({ name, questions, setView }) => {
   // setup state
   const [quizStats, setQuizStats] = useState({
     currentIndex: 0,
@@ -81,6 +81,8 @@ const Quiz = ({ name, questions }) => {
           <Results
             correctAnswers={correctAnswers}
             totalQuestions={totalQuestions}
+            setQuizStats={setQuizStats}
+            setView={setView}
           />
         )}
       </div>
@@ -91,6 +93,7 @@ const Quiz = ({ name, questions }) => {
 Quiz.propTypes = {
   name: PropTypes.string,
   questions: PropTypes.array,
+  setView: PropTypes.func,
 };
 
 export default Quiz;

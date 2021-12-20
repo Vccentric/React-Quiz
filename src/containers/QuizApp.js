@@ -14,7 +14,7 @@ const QuizApp = ({ data }) => {
   return (
     <div id="quiz-app">
       {view?.showQuizList && <QuizList data={data} setView={setView} />}
-      {view?.showQuiz && <Quiz {...view.showQuiz} />}
+      {view?.showQuiz && <Quiz {...view.showQuiz} setView={setView} />}
     </div>
   );
 };
