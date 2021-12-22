@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import QuizList from "./QuizList";
 import Quiz from "./Quiz";
-import "normalize.css";
-import "../styles/styles.scss";
 
 // main container component
 const QuizApp = ({ data }) => {
