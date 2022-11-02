@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import QuizItem from "../components/QuizItem";
+import QuizItem from "./QuizItem";
 
-// container component that contains a list of quizzes
+// component that contains a list of quizzes
 const QuizList = ({ data, setView }) => {
   // setup elements
   const quizzes = data?.quizzes?.map((quiz, index) => {

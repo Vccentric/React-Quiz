@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import QuizList from "./QuizList";
+import QuizList from "../components/QuizList";
 import Quiz from "./Quiz";
 
 // main container component
