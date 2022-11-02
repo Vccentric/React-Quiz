@@ -2,26 +2,25 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // results component
-const Results = ({ correctAnswers, totalQuestions, setQuizStats, setView }) => {
-  const resetQuiz = {
-    currentIndex: 0,
-    correctAnswers: 0,
-    selectedAnswer: false,
-    showResults: false,
-  };
+const Results = ({
+  correctAnswers,
+  totalQuestions,
+  resetQuizStats,
+  setView,
+}) => {
+  // setup functions
+  const quit = () => setView({ showQuizList: true, showQuiz: false });
+
   return (
     <div id="results">
       <p className="test-score">
         You have {correctAnswers} correct answers out of a total of{" "}
         {totalQuestions} questions!!!
       </p>
-      <button className="restart" onClick={() => setQuizStats(resetQuiz)}>
+      <button className="restart" onClick={resetQuizStats}>
         Restart
       </button>
-      <button
-        className="quit"
-        onClick={() => setView({ showQuizList: true, showQuiz: false })}
-      >
+      <button className="quit" onClick={quit}>
         Quit
       </button>
     </div>
@@ -31,7 +30,7 @@ const Results = ({ correctAnswers, totalQuestions, setQuizStats, setView }) => {
 Results.propTypes = {
   correctAnswers: PropTypes.number,
   totalQuestions: PropTypes.number,
-  setQuizStats: PropTypes.func,
+  resetQuizStats: PropTypes.func,
   setView: PropTypes.func,
 };
 
