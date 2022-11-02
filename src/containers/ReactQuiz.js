@@ -4,7 +4,7 @@ import QuizList from "./QuizList";
 import Quiz from "./Quiz";
 
 // main container component
-const QuizApp = ({ data }) => {
+const ReactQuiz = ({ data }) => {
   const [view, setView] = useState({
     showQuizList: true,
     showQuiz: false,
@@ -17,8 +17,8 @@ const QuizApp = ({ data }) => {
   );
 };
 
-QuizApp.propTypes = {
+ReactQuiz.propTypes = {
   data: PropTypes.object,
 };
 
-export default QuizApp;
+export default ReactQuiz;
