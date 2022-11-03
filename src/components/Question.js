@@ -11,7 +11,7 @@ const Question = ({
 }) => {
   // setup variables
   const { currentIndex, correctAnswers, selectedAnswer } = quizStats;
-  const { question, answers, correctAnswer } = currentQuestion;
+  const { question, answerChoices, correctAnswer } = currentQuestion;
 
   // setup functions
   const next = () => {
@@ -31,7 +31,7 @@ const Question = ({
   };
 
   // setup elements
-  const answerChoices = answers?.map((item, index) => {
+  const listAnswerChoices = answerChoices?.map((item, index) => {
     // setup variable
     const key = index * Math.random();
     const value = item || "";
@@ -61,7 +61,7 @@ const Question = ({
         Question {currentIndex + 1}/{totalQuestions}
       </h2>
       <p className="question-text">{question}</p>
-      <ul>{answerChoices}</ul>
+      <ul>{listAnswerChoices}</ul>
       {selectedAnswer && <button onClick={next}>Next</button>}
     </div>
   );

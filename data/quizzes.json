@@ -5,52 +5,52 @@
       "questions": [
         {
           "question": "How many sides are there in a pentagon?",
-          "answers": ["4", "5", "6", "7"],
+          "answerChoices": ["4", "5", "6", "7"],
           "correctAnswer": "5"
         },
         {
           "question": "What is: 16 x 16 = ?",
-          "answers": ["192", "252", "256", "264"],
+          "answerChoices": ["192", "252", "256", "264"],
           "correctAnswer": "256"
         },
         {
           "question": "How many sides are there in a octagon?",
-          "answers": ["5", "6", "7", "8"],
+          "answerChoices": ["5", "6", "7", "8"],
           "correctAnswer": "8"
         },
         {
           "question": "What is: 361 / 19 = ?",
-          "answers": ["19", "17", "20.056", "18.05"],
+          "answerChoices": ["19", "17", "20.056", "18.05"],
           "correctAnswer": "19"
         },
         {
           "question": "How many sides are there in a star?",
-          "answers": ["10", "11", "12", "14"],
+          "answerChoices": ["10", "11", "12", "14"],
           "correctAnswer": "10"
         },
         {
           "question": "What is: 21 x 17 = ?",
-          "answers": ["273", "331", "336", "357"],
+          "answerChoices": ["273", "331", "336", "357"],
           "correctAnswer": "357"
         },
         {
           "question": "How many sides are there in a heptagon?",
-          "answers": ["3", "5", "7", "9"],
+          "answerChoices": ["3", "5", "7", "9"],
           "correctAnswer": "7"
         },
         {
           "question": "What is: 84 / 4 = ?",
-          "answers": ["16", "18", "21", "24"],
+          "answerChoices": ["16", "18", "21", "24"],
           "correctAnswer": "21"
         },
         {
           "question": "How many sides are there in a triange?",
-          "answers": ["3", "4", "5", "6"],
+          "answerChoices": ["3", "4", "5", "6"],
           "correctAnswer": "3"
         },
         {
           "question": "What is: 11 x 7 = ?",
-          "answers": ["71", "77", "78", "79"],
+          "answerChoices": ["71", "77", "78", "79"],
           "correctAnswer": "77"
         }
       ]

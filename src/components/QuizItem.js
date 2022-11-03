@@ -2,17 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // quiz item component
-const QuizItem = ({ quiz, setView }) => {
+const QuizItem = ({ quiz, setQuiz }) => {
   // setup variables
   const name = quiz.name || "";
   const total = quiz.questions?.length || 0;
 
   // setup functions
-  const onClick = () =>
-    setView({
-      showQuizList: false,
-      showQuiz: quiz,
-    });
+  const onClick = () => setQuiz(quiz);
 
   return (
     <div className="quiz" onClick={onClick}>
@@ -24,7 +20,7 @@ const QuizItem = ({ quiz, setView }) => {
 
 QuizItem.propTypes = {
   quiz: PropTypes.object,
-  setView: PropTypes.func,
+  setQuiz: PropTypes.func,
 };
 
 export default QuizItem;

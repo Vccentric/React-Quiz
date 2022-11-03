@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import QuizItem from "./QuizItem";
 
 // component that contains a list of quizzes
-const QuizList = ({ data, setView }) => {
+const QuizList = ({ data, setQuiz }) => {
   // setup elements
   const quizzes = data?.quizzes?.map((quiz, index) => {
     const key = index * Math.random();
     return (
       <li key={key}>
-        <QuizItem quiz={quiz} setView={setView} />
+        <QuizItem quiz={quiz} setQuiz={setQuiz} />
       </li>
     );
   });
@@ -30,7 +30,7 @@ const QuizList = ({ data, setView }) => {
 
 QuizList.propTypes = {
   data: PropTypes.object,
-  setView: PropTypes.func,
+  setQuiz: PropTypes.func,
 };
 
 export default QuizList;

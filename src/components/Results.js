@@ -6,11 +6,8 @@ const Results = ({
   correctAnswers,
   totalQuestions,
   resetQuizStats,
-  setView,
+  setQuizList,
 }) => {
-  // setup functions
-  const quit = () => setView({ showQuizList: true, showQuiz: false });
-
   return (
     <div id="results">
       <p className="test-score">
@@ -20,7 +17,7 @@ const Results = ({
       <button className="restart" onClick={resetQuizStats}>
         Restart
       </button>
-      <button className="quit" onClick={quit}>
+      <button className="quit" onClick={setQuizList}>
         Quit
       </button>
     </div>
@@ -31,7 +28,7 @@ Results.propTypes = {
   correctAnswers: PropTypes.number,
   totalQuestions: PropTypes.number,
   resetQuizStats: PropTypes.func,
-  setView: PropTypes.func,
+  setQuizList: PropTypes.func,
 };
 
 export default Results;

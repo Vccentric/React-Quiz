@@ -7,14 +7,20 @@ import Quiz from "./Quiz";
 const ReactQuiz = ({ data }) => {
   // setup state
   const [view, setView] = useState({
-    showQuizList: true,
-    showQuiz: false,
+    quizList: true,
+    selectedQuiz: false,
   });
+
+  // setup functions
+  const setQuizList = () => setView({ quizList: true, selectedQuiz: false });
+  const setQuiz = (quiz) => setView({ quizList: false, selectedQuiz: quiz });
 
   return (
     <div id="react-quiz">
-      {view?.showQuizList && <QuizList data={data} setView={setView} />}
-      {view?.showQuiz && <Quiz {...view.showQuiz} setView={setView} />}
+      {view?.quizList && <QuizList data={data} setQuiz={setQuiz} />}
+      {view?.selectedQuiz && (
+        <Quiz selectedQuiz={view?.selectedQuiz} setQuizList={setQuizList} />
+      )}
     </div>
   );
 };
