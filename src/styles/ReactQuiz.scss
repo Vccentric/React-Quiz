@@ -1,0 +1,52 @@
+#react-quiz {
+  font-size: 16px;
+  width: 600px;
+  margin: auto;
+}
+
+#quiz-list {
+  display: flex;
+  flex-direction: column;
+  .header {
+    background-color: #8a80b5;
+    color: white;
+    text-align: center;
+    .title {
+      font-size: 3rem;
+      margin: 1rem 0;
+    }
+    .sub-title {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+  }
+  .body {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    .title {
+      margin: 1rem 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .quiz {
+      background-color: white;
+      border: 1px solid white;
+      cursor: pointer;
+      padding: 1rem;
+      margin: 1rem 0;
+      .name {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .total {
+        color: #c1c4cd;
+      }
+    }
+    .quiz:hover {
+      border-color: gray;
+    }
+  }
+}
