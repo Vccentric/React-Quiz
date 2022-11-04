@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // answer choice component
-const AnswerChoice = ({ value, checkAnswer }) => {
+const AnswerChoice = ({ value, selected, selectAnswer }) => {
+  const classNames = selected ? "answer selected" : "answer";
   return (
-    <button className="answer" onClick={checkAnswer}>
+    <button className={classNames} onClick={selectAnswer}>
       {value}
     </button>
   );
@@ -12,7 +13,8 @@ const AnswerChoice = ({ value, checkAnswer }) => {
 
 AnswerChoice.propTypes = {
   value: PropTypes.string,
-  checkAnswer: PropTypes.func,
+  selected: PropTypes.bool,
+  selectAnswer: PropTypes.func,
 };
 
 export default AnswerChoice;

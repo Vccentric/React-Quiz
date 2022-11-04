@@ -10,21 +10,28 @@ const Question = ({
   setQuizStats,
 }) => {
   // setup variables
-  const { currentIndex, correctAnswers, selectedAnswer } = quizStats;
+  const { currentIndex, totalCorrectAnswers, selectedAnswer } = quizStats;
   const { question, answerChoices, correctAnswer } = currentQuestion;
 
   // setup functions
   const next = () => {
     const nextIndex = currentIndex + 1;
+    const count =
+      selectedAnswer === correctAnswer
+        ? totalCorrectAnswers + 1
+        : totalCorrectAnswers;
     if (nextIndex < totalQuestions) {
       setQuizStats({
         ...quizStats,
         currentIndex: nextIndex,
-        selectedAnswer: false,
+        selectedAnswer: null,
+        totalCorrectAnswers: count,
       });
     } else {
       setQuizStats({
         ...quizStats,
+        currentIndex: 0,
+        selectedAnswer: null,
         showResults: true,
       });
     }
@@ -35,22 +42,23 @@ const Question = ({
     // setup variable
     const key = index * Math.random();
     const value = item || "";
+    const selected = selectedAnswer === value;
 
     // setup functions
-    const checkAnswer = () => {
-      if (selectedAnswer) return false;
-      const count =
-        value === correctAnswer ? correctAnswers + 1 : correctAnswers;
+    const selectAnswer = () => {
       setQuizStats({
         ...quizStats,
-        correctAnswers: count,
-        selectedAnswer: true,
+        selectedAnswer: value,
       });
     };
 
     return (
       <li key={key}>
-        <AnswerChoice value={value} checkAnswer={checkAnswer} />
+        <AnswerChoice
+          value={value}
+          selected={selected}
+          selectAnswer={selectAnswer}
+        />
       </li>
     );
   });

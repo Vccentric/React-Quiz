@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // results component
 const Results = ({
-  correctAnswers,
+  totalCorrectAnswers,
   totalQuestions,
   resetQuizStats,
   setQuizList,
@@ -11,7 +11,7 @@ const Results = ({
   return (
     <div id="results">
       <p className="test-score">
-        You have {correctAnswers} correct answers out of a total of{" "}
+        You have {totalCorrectAnswers} correct answers out of a total of{" "}
         {totalQuestions} questions!!!
       </p>
       <button className="restart" onClick={resetQuizStats}>
@@ -25,7 +25,7 @@ const Results = ({
 };
 
 Results.propTypes = {
-  correctAnswers: PropTypes.number,
+  totalCorrectAnswers: PropTypes.number,
   totalQuestions: PropTypes.number,
   resetQuizStats: PropTypes.func,
   setQuizList: PropTypes.func,

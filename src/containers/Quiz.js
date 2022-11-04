@@ -8,14 +8,14 @@ const Quiz = ({ selectedQuiz, setQuizList }) => {
   // setup state
   const [quizStats, setQuizStats] = useState({
     currentIndex: 0,
-    correctAnswers: 0,
-    selectedAnswer: false,
+    selectedAnswer: null,
     showResults: false,
+    totalCorrectAnswers: 0,
   });
 
   // setup variables
   const { name, questions } = selectedQuiz;
-  const { currentIndex, correctAnswers, showResults } = quizStats;
+  const { currentIndex, totalCorrectAnswers, showResults } = quizStats;
   const totalQuestions = questions.length || 0;
   const currentQuestion = questions?.[currentIndex];
 
@@ -23,9 +23,9 @@ const Quiz = ({ selectedQuiz, setQuizList }) => {
   const resetQuizStats = () =>
     setQuizStats({
       currentIndex: 0,
-      correctAnswers: 0,
-      selectedAnswer: false,
+      selectedAnswer: null,
       showResults: false,
+      totalCorrectAnswers: 0,
     });
 
   return (
@@ -44,7 +44,7 @@ const Quiz = ({ selectedQuiz, setQuizList }) => {
         )}
         {showResults && (
           <Results
-            correctAnswers={correctAnswers}
+            totalCorrectAnswers={totalCorrectAnswers}
             totalQuestions={totalQuestions}
             resetQuizStats={resetQuizStats}
             setQuizList={setQuizList}
