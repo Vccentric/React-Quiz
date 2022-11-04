@@ -31,7 +31,7 @@ const Quiz = ({ selectedQuiz, setQuizList }) => {
   return (
     <div id="quiz">
       <div className="header">
-        <h1 className="quiz-name">{name}</h1>
+        <h1 className="title">{name}</h1>
       </div>
       <div className="body">
         {!showResults && (
