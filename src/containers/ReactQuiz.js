@@ -3,13 +3,16 @@ import PropTypes from "prop-types";
 import QuizList from "../components/QuizList";
 import Quiz from "./Quiz";
 
+// initial state
+const initState = {
+  quizList: true,
+  selectedQuiz: false,
+};
+
 // main container component
-const ReactQuiz = ({ data }) => {
+const ReactQuiz = ({ data, localState = initState }) => {
   // setup state
-  const [view, setView] = useState({
-    quizList: true,
-    selectedQuiz: false,
-  });
+  const [view, setView] = useState(localState);
 
   // setup functions
   const setQuizList = () => setView({ quizList: true, selectedQuiz: false });
@@ -27,6 +30,7 @@ const ReactQuiz = ({ data }) => {
 
 ReactQuiz.propTypes = {
   data: PropTypes.object,
+  localState: PropTypes.object,
 };
 
 export default ReactQuiz;
