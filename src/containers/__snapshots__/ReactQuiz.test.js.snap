@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  id="react-quiz"
+>
+  <div
+    id="quiz-list"
+  >
+    <div
+      className="header"
+    >
+      <h1
+        className="title"
+      >
+        Lets Play!!!
+      </h1>
+      <h2
+        className="sub-title"
+      >
+        And be the first!
+      </h2>
+    </div>
+    <div
+      className="body"
+    >
+      <h2
+        className="title"
+      >
+        Quizzes:
+      </h2>
+      <ul>
+        <li>
+          <div
+            className="quiz"
+            onClick={[Function]}
+          >
+            <div
+              className="name"
+            >
+              Beginner Mathematics
+            </div>
+            <div
+              className="total"
+            >
+              10
+               Questions
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
