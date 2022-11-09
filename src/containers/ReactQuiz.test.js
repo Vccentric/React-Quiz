@@ -16,7 +16,6 @@ test("renders quiz list", () => {
     selectedQuiz: false,
   };
   render(<ReactQuiz data={data} localState={initState} />);
-  screen.debug();
   const element = screen.getByText("Lets Play!!!");
   expect(element).toBeInTheDocument();
 });
