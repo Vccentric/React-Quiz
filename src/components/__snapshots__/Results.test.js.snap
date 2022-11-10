@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly - snapshot 1`] = `
+<div
+  id="results"
+>
+  <h2
+    className="title"
+  >
+    Results:
+  </h2>
+  <p
+    className="test-score"
+  >
+    You have 
+    0
+     correct answers out of a total of
+     
+    10
+     questions!!!
+  </p>
+  <button
+    className="restart"
+    onClick={[MockFunction]}
+  >
+    Restart
+  </button>
+  <button
+    className="quit"
+    onClick={[MockFunction]}
+  >
+    Quit
+  </button>
+</div>
+`;
