@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly - snapshot 1`] = `
+<div
+  className="quiz"
+  onClick={[Function]}
+>
+  <div
+    className="name"
+  >
+    Quiz Name
+  </div>
+  <div
+    className="total"
+  >
+    1
+     Questions
+  </div>
+</div>
+`;
