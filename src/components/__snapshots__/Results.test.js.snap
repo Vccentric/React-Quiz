@@ -20,13 +20,13 @@ exports[`renders correctly - snapshot 1`] = `
      questions!!!
   </p>
   <button
-    className="restart"
+    className="action restart"
     onClick={[MockFunction]}
   >
     Restart
   </button>
   <button
-    className="quit"
+    className="action quit"
     onClick={[MockFunction]}
   >
     Quit

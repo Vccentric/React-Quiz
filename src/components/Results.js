@@ -15,10 +15,10 @@ const Results = ({
         You have {totalCorrectAnswers} correct answers out of a total of{" "}
         {totalQuestions} questions!!!
       </p>
-      <button className="restart" onClick={resetQuizStats}>
+      <button className="action restart" onClick={resetQuizStats}>
         Restart
       </button>
-      <button className="quit" onClick={setQuizList}>
+      <button className="action quit" onClick={setQuizList}>
         Quit
       </button>
     </div>

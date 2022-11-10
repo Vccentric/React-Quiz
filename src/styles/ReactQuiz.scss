@@ -1,7 +1,31 @@
+#root {
+  align-items: center;
+  background-color: #e9e9e9;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
 #react-quiz {
+  border: 10px solid white;
+  border-radius: 10px;
   font-size: 16px;
-  margin: auto;
-  width: 600px;
+  flex-basis: 100%;
+  max-width: 500px;
+  .header {
+    background-color: #8a80b5;
+    color: white;
+    text-align: center;
+    .title {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+  }
+  .body {
+    background-color: #f9f9f9;
+    padding: 2rem;
+  }
   ul {
     list-style-type: none;
     margin: 0;
@@ -10,9 +34,12 @@
   button {
     all: unset;
     background-color: white;
-    border: 1px solid white;
+    border: 1px solid gray;
+    border-radius: 5px;
     box-sizing: border-box;
     color: black;
+    cursor: pointer;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 1rem 0;
     padding: 1rem;
@@ -23,35 +50,29 @@
   button.selected {
     background-color: #8a80b5;
     color: white;
-    cursor: pointer;
+    text-decoration: underline;
+  }
+  button.action {
+    background-color: #8a80b5;
+    color: white;
+  }
+  button.action:hover,
+  button.selected:hover {
+    background-color: #b7b0d1;
   }
 }
 
 #quiz-list {
   display: flex;
   flex-direction: column;
-  .header {
-    background-color: #8a80b5;
-    color: white;
-    text-align: center;
-    .title {
-      font-size: 3rem;
-      margin: 1rem 0;
-    }
-    .sub-title {
-      font-size: 1.5rem;
-      margin: 1rem 0;
-    }
-  }
   .body {
-    background-color: #f9f9f9;
-    padding: 2rem;
     .title {
       margin: 1rem 0;
     }
     .quiz {
       background-color: white;
-      border: 1px solid white;
+      border: 1px solid gray;
+      border-radius: 5px;
       cursor: pointer;
       margin: 1rem 0;
       padding: 1rem;
@@ -64,7 +85,8 @@
       }
     }
     .quiz:hover {
-      border-color: gray;
+      border-color: #8a80b5;
+      color: #8a80b5;
     }
   }
 }
@@ -72,21 +94,11 @@
 #quiz {
   display: flex;
   flex-direction: column;
-  .header {
-    background-color: #8a80b5;
-    color: white;
-    text-align: center;
-    .title {
-      font-size: 3rem;
-      margin: 1rem 0;
-    }
-  }
   .body {
-    background-color: #f9f9f9;
-    padding: 2rem;
     .question {
       display: flex;
       flex-direction: column;
+      height: 560px;
       .index-total {
         margin: 0.5rem 0;
       }

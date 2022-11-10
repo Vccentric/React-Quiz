@@ -27,7 +27,12 @@
           "question": "How many sides are there in a star?",
           "answerChoices": ["10", "11", "12", "14"],
           "correctAnswer": "10"
-        },
+        }
+      ]
+    },
+    {
+      "name": "Advanced Mathematics",
+      "questions": [
         {
           "question": "What is: 21 x 17 = ?",
           "answerChoices": ["273", "331", "336", "357"],

@@ -18,7 +18,6 @@ const QuizList = ({ data, setQuiz }) => {
     <div id="quiz-list">
       <div className="header">
         <h1 className="title">Lets Play!!!</h1>
-        <h2 className="sub-title">And be the first!</h2>
       </div>
       <div className="body">
         <h2 className="title">Quizzes:</h2>

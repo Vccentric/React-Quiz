@@ -15,11 +15,6 @@ exports[`renders correctly - snapshot 1`] = `
       >
         Lets Play!!!
       </h1>
-      <h2
-        className="sub-title"
-      >
-        And be the first!
-      </h2>
     </div>
     <div
       className="body"
@@ -43,7 +38,25 @@ exports[`renders correctly - snapshot 1`] = `
             <div
               className="total"
             >
-              10
+              5
+               Questions
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            className="quiz"
+            onClick={[Function]}
+          >
+            <div
+              className="name"
+            >
+              Advanced Mathematics
+            </div>
+            <div
+              className="total"
+            >
+              5
                Questions
             </div>
           </div>

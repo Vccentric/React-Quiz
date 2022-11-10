@@ -70,7 +70,11 @@ const Question = ({
       </h2>
       <p className="question-text">{question}</p>
       <ul>{listAnswerChoices}</ul>
-      {selectedAnswer && <button onClick={next}>Next</button>}
+      {selectedAnswer && (
+        <button className="action" onClick={next}>
+          Next
+        </button>
+      )}
     </div>
   );
 };
