@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly - snapshot 1`] = `
+<div
+  id="quiz"
+>
+  <div
+    className="header"
+  >
+    <h1
+      className="title"
+    >
+      Quiz Name
+    </h1>
+  </div>
+  <div
+    className="body"
+  >
+    <div
+      className="question"
+    >
+      <h2
+        className="index-total"
+      >
+        Question 
+        1
+        /
+        1
+      </h2>
+      <p
+        className="question-text"
+      >
+        Question?
+      </p>
+      <ul>
+        <li>
+          <button
+            className="answer"
+            onClick={[Function]}
+          >
+            1
+          </button>
+        </li>
+        <li>
+          <button
+            className="answer"
+            onClick={[Function]}
+          >
+            2
+          </button>
+        </li>
+        <li>
+          <button
+            className="answer"
+            onClick={[Function]}
+          >
+            3
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

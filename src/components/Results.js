@@ -10,6 +10,7 @@ const Results = ({
 }) => {
   return (
     <div id="results">
+      <h2 className="title">Results:</h2>
       <p className="test-score">
         You have {totalCorrectAnswers} correct answers out of a total of{" "}
         {totalQuestions} questions!!!
