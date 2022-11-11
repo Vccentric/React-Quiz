@@ -7,6 +7,13 @@
   width: 100%;
 }
 
+@media (max-height: 720px) {
+  #root {
+    align-items: normal;
+    justify-content: normal;
+  }
+}
+
 #react-quiz {
   border: 10px solid white;
   border-radius: 10px;
