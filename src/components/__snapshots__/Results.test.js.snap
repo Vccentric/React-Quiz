@@ -19,17 +19,21 @@ exports[`renders correctly - snapshot 1`] = `
     10
      questions!!!
   </p>
-  <button
-    className="action restart"
-    onClick={[MockFunction]}
+  <div
+    className="actions-container"
   >
-    Restart
-  </button>
-  <button
-    className="action quit"
-    onClick={[MockFunction]}
-  >
-    Quit
-  </button>
+    <button
+      className="action quit"
+      onClick={[MockFunction]}
+    >
+      Quit
+    </button>
+    <button
+      className="action restart"
+      onClick={[MockFunction]}
+    >
+      Restart
+    </button>
+  </div>
 </div>
 `;

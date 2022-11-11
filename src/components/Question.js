@@ -8,10 +8,12 @@ const Question = ({
   totalQuestions,
   quizStats,
   setQuizStats,
+  setQuizList,
 }) => {
   // setup variables
   const { currentIndex, totalCorrectAnswers, selectedAnswer } = quizStats;
   const { question, answerChoices, correctAnswer } = currentQuestion;
+  const isDisabled = selectedAnswer === null;
 
   // setup functions
   const next = () => {
@@ -71,11 +73,14 @@ const Question = ({
       </h2>
       <p className="question-text">{question}</p>
       <ul>{listAnswerChoices}</ul>
-      {selectedAnswer && (
-        <button className="action" onClick={next}>
+      <div className="actions-container">
+        <button className="action quit" onClick={setQuizList}>
+          Quit
+        </button>
+        <button className="action" onClick={next} disabled={isDisabled}>
           Next
         </button>
-      )}
+      </div>
     </div>
   );
 };
@@ -85,6 +90,7 @@ Question.propTypes = {
   totalQuestions: PropTypes.number,
   quizStats: PropTypes.object,
   setQuizStats: PropTypes.func,
+  setQuizList: PropTypes.func,
 };
 
 export default Question;

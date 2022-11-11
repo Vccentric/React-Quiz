@@ -58,6 +58,23 @@ exports[`renders correctly - snapshot 1`] = `
           </button>
         </li>
       </ul>
+      <div
+        className="actions-container"
+      >
+        <button
+          className="action quit"
+          onClick={[MockFunction]}
+        >
+          Quit
+        </button>
+        <button
+          className="action"
+          disabled={true}
+          onClick={[Function]}
+        >
+          Next
+        </button>
+      </div>
     </div>
   </div>
 </div>

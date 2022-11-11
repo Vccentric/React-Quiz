@@ -55,10 +55,24 @@
   button.action {
     background-color: #8a80b5;
     color: white;
+    flex-basis: 48%;
   }
   button.action:hover,
   button.selected:hover {
     background-color: #b7b0d1;
+  }
+  button.action:disabled {
+    background-color: gray;
+    color: white;
+    cursor: default;
+  }
+  button.action:disabled:hover {
+    text-decoration: none;
+  }
+  .actions-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -98,7 +112,6 @@
     .question {
       display: flex;
       flex-direction: column;
-      height: 560px;
       .index-total {
         margin: 0.5rem 0;
       }

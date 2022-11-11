@@ -43,6 +43,7 @@ const Quiz = ({ selectedQuiz, setQuizList, localState = initState }) => {
             totalQuestions={totalQuestions}
             quizStats={quizStats}
             setQuizStats={setQuizStats}
+            setQuizList={setQuizList}
           />
         )}
         {showResults && (
