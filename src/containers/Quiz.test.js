@@ -1,6 +1,7 @@
 import "@testing-library/jest-dom";
 import renderer from "react-test-renderer";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import Quiz from "./Quiz";
 
@@ -44,8 +45,7 @@ test("renders question", () => {
       localState={initState}
     />
   );
-  const element = screen.getByText("Question?");
-  expect(element).toBeInTheDocument();
+  expect(screen.getByText("Question?")).toBeInTheDocument();
 });
 
 test("renders results summary", () => {
@@ -58,6 +58,20 @@ test("renders results summary", () => {
       localState={mockState}
     />
   );
-  const element = screen.getByText("Results:");
-  expect(element).toBeInTheDocument();
+  expect(screen.getByText("Results:")).toBeInTheDocument();
+});
+
+test("renders results summary then user clicks on restart button", async () => {
+  const mockState = initState;
+  mockState.showResults = true;
+  render(
+    <Quiz
+      selectedQuiz={selectedQuiz}
+      setQuizList={setQuizList}
+      localState={mockState}
+    />
+  );
+  expect(screen.getByText("Results:")).toBeInTheDocument();
+  await userEvent.click(screen.getByText("Restart"));
+  expect(screen.getByText("Question?")).toBeInTheDocument();
 });
