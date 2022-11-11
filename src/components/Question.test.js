@@ -46,8 +46,6 @@ test("renders results with mock values", () => {
       setQuizList={setQuizList}
     />
   );
-  const item1 = screen.getByText("Question Name");
-  const item2 = screen.getByText("100");
-  expect(item1).toBeInTheDocument();
-  expect(item2).toBeInTheDocument();
+  expect(screen.getByText("Question Name")).toBeInTheDocument();
+  expect(screen.getByText("100")).toBeInTheDocument();
 });

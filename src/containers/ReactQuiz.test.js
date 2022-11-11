@@ -16,8 +16,7 @@ test("renders quiz list", () => {
     selectedQuiz: false,
   };
   render(<ReactQuiz data={data} localState={initState} />);
-  const element = screen.getByText("Welcome!!!");
-  expect(element).toBeInTheDocument();
+  expect(screen.getByText("Welcome!!!")).toBeInTheDocument();
 });
 
 test("renders specific quiz", () => {
@@ -26,6 +25,5 @@ test("renders specific quiz", () => {
     selectedQuiz: data?.quizzes?.[0],
   };
   render(<ReactQuiz data={data} localState={initState} />);
-  const element = screen.getByText("Beginner Mathematics");
-  expect(element).toBeInTheDocument();
+  expect(screen.getByText("Beginner Mathematics")).toBeInTheDocument();
 });

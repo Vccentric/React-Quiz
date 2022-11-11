@@ -25,8 +25,6 @@ test("renders quiz item with empty quiz object", () => {
 
 test("renders quiz item with defined quiz object", () => {
   render(<QuizItem quiz={quiz} setQuiz={setQuiz} />);
-  const quizNameText = screen.getByText("Quiz Name");
-  const totalQuestionText = screen.getByText("1 Questions");
-  expect(quizNameText).toBeInTheDocument();
-  expect(totalQuestionText).toBeInTheDocument();
+  expect(screen.getByText("Quiz Name")).toBeInTheDocument();
+  expect(screen.getByText("1 Questions")).toBeInTheDocument();
 });

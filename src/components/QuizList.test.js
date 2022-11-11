@@ -17,8 +17,6 @@ test("renders correctly - snapshot", () => {
 test("renders results with mock values", () => {
   const mockData = { quizzes: [{ name: "abc" }, { name: "def" }] };
   render(<QuizList data={mockData} setQuiz={setQuiz} />);
-  const item1 = screen.getByText("abc");
-  const item2 = screen.getByText("def");
-  expect(item1).toBeInTheDocument();
-  expect(item2).toBeInTheDocument();
+  expect(screen.getByText("abc")).toBeInTheDocument();
+  expect(screen.getByText("def")).toBeInTheDocument();
 });
