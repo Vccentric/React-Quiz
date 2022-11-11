@@ -33,6 +33,7 @@ const Question = ({
         currentIndex: 0,
         selectedAnswer: null,
         showResults: true,
+        totalCorrectAnswers: count,
       });
     }
   };

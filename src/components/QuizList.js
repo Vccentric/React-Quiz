@@ -17,7 +17,7 @@ const QuizList = ({ data, setQuiz }) => {
   return (
     <div id="quiz-list">
       <div className="header">
-        <h1 className="title">Lets Play!!!</h1>
+        <h1 className="title">Welcome!!!</h1>
       </div>
       <div className="body">
         <h2 className="title">Quizzes:</h2>
