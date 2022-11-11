@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly - snapshot 1`] = `
+<div
+  className="question"
+>
+  <h2
+    className="index-total"
+  >
+    Question 
+    1
+    /
+    5
+  </h2>
+  <p
+    className="question-text"
+  />
+  <ul />
+  <div
+    className="actions-container"
+  >
+    <button
+      className="action quit"
+      onClick={[MockFunction]}
+    >
+      Quit
+    </button>
+    <button
+      className="action"
+      disabled={true}
+      onClick={[Function]}
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
