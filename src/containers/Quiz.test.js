@@ -49,7 +49,7 @@ test("renders question", () => {
 });
 
 test("renders results summary", () => {
-  const mockState = initState;
+  const mockState = { ...initState };
   mockState.showResults = true;
   render(
     <Quiz
@@ -62,7 +62,7 @@ test("renders results summary", () => {
 });
 
 test("renders results summary then user clicks on restart button", async () => {
-  const mockState = initState;
+  const mockState = { ...initState };
   mockState.showResults = true;
   render(
     <Quiz
